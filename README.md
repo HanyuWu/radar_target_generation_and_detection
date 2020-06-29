@@ -45,7 +45,11 @@ After we get the noise level matrix using our siling window as dicussed above. W
 
 ``` Matlab
 noise_level = padarray(noise_level,[Tr+Gr,Td+Gd],1e5,'both');
-CFAR = RDM.*(RDM>noise_level);
+CFAR = 1*(RDM>noise_level);
 ```
 
 The 1e5 value in the code block is supposed to be bigger than evevy decibels in the range doppler map (RDM). Thus we can make a mask by using '**RDM>noise_level**'. The edges of this mask are all 0 which can suppress the non-thresholded cells at the edges of the RDM.
+
+Final output is as follow:
+
+<img src="./output/CFAR.jpg">

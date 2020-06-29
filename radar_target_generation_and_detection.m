@@ -209,7 +209,7 @@ for i = 1:nRow
 end
 
 noise_level = padarray(noise_level,[Tr+Gr,Td+Gd],1e5,'both');
-CFAR = RDM.*(RDM>noise_level);
+CFAR = 1*(RDM>noise_level);
 
 % *%TODO* :
 %display the CFAR output using the Surf function like we did for Range
