@@ -14,7 +14,7 @@ clc;
 % *%TODO* :
 % define the target's initial position and velocity. Note : Velocity
 % remains contant
-targetPosition = 50;
+targetPosition = 100;
 targetVelocity = 50;
 
 
@@ -172,7 +172,6 @@ offset = 1.5;
 [rRow, vCol] = size(RDM);
 noise_level = zeros(rRow-2*(Tr+Gr), vCol-2*(Td+Gd));
 [nRow, nCol] = size(noise_level);
-CFAR = zeros(size(RDM));
 
 % *%TODO* :
 %design a loop such that it slides the CUT across range doppler map by
